@@ -1,26 +1,26 @@
-Day 1: 
-  JS: Code review: 10/10, Stars: 8/8
-  TS: Code review: 10/10, Stars: 8/8
-Day 2: ?
-Day 3: ?
-Day 4: ?
-Day 5: ?
-Day 6: ?
-Day 7: ?
-Day 8: ? 
-Day 9: ?
-Day 10: ?
-Day 11: ?
-Day 12: ?
-Day 13: ?
-Day 14: ?
-Day 15: ? 
-Day 16: ?
-Day 17: ?
-Day 18: ?
-Day 19: ?
-Day 20: ?
-Day 21: ?
-Day 22: ?
-Day 23: ?
-Day 24: ?
+# HowIsItGoing?? - Tracker
+
+- Day 1:  JS: Code review: 10/10, Stars: 8/8 | TS: Code review: 10/10, Stars: 8/8
+- Day 2:  JS: ? | TS: ?
+- Day 3:  JS: ? | TS: ?
+- Day 4:  JS: ? | TS: ?
+- Day 5:  JS: ? | TS: ?
+- Day 6:  JS: ? | TS: ?
+- Day 7:  JS: ? | TS: ?
+- Day 8:  JS: ? | TS: ?
+- Day 9:  JS: ? | TS: ?
+- Day 10: JS: ? | TS: ?
+- Day 11: JS: ? | TS: ?
+- Day 12: JS: ? | TS: ?
+- Day 13: JS: ? | TS: ?
+- Day 14: JS: ? | TS: ?
+- Day 15: JS: ? | TS: ?
+- Day 16: JS: ? | TS: ?
+- Day 17: JS: ? | TS: ?
+- Day 18: JS: ? | TS: ?
+- Day 19: JS: ? | TS: ?
+- Day 20: JS: ? | TS: ?
+- Day 21: JS: ? | TS: ?
+- Day 22: JS: ? | TS: ?
+- Day 23: JS: ? | TS: ?
+- Day 24: JS: ? | TS: ?
