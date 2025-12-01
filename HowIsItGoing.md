@@ -1,4 +1,6 @@
-Day 1: Code review: 10/10, Stars: 8/8
+Day 1: 
+  JS: Code review: 10/10, Stars: 8/8
+  TS: Code review: 10/10, Stars: 8/8
 Day 2: ?
 Day 3: ?
 Day 4: ?
