@@ -1,7 +1,7 @@
 function manufactureGifts(
   giftsToProduce: Array<{ toy: string, quantity: number }>
   ): string[]  {
-  let result = []
+  let result : Array<string> = []
   giftsToProduce.forEach(
     item => {
       if (item.quantity == 1){
@@ -10,7 +10,7 @@ function manufactureGifts(
         let i = item.quantity;
         while (i > 0){
           result.push(item.toy)
-          i = i - 1
+          i--
         }
       }
     }
