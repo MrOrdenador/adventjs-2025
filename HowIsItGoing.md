@@ -1,7 +1,7 @@
 # HowIsItGoing?? - Tracker
 
-- Day 1:  JS: Code review: 10/10, Stars: 8/8 | TS: Code review: 10/10, Stars: 8/8
-- Day 2:  JS: ? | TS: ?
+- Day 1:  JS: Code Review: 10/10, Stars: 8/8 | TS: Code Review: 10/10, Stars: 8/8
+- Day 2:  JS: Code Review: 10/10, Stars: 8/8 | TS: Code Review: 10/10, Stars: 8/8
 - Day 3:  JS: ? | TS: ?
 - Day 4:  JS: ? | TS: ?
 - Day 5:  JS: ? | TS: ?
