@@ -1,4 +1,4 @@
-# Day 2: 👶 Help the intern
+# Day 3: 👶 Help the intern
 
 In Santa’s workshop there’s an intern elf who is learning to wrap gifts.  
 They’ve asked the elf to wrap boxes using only text… and they do it *more or less* correctly.
