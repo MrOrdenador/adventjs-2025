@@ -7,5 +7,11 @@ I will be exclusively using git to upload my answers, so I'm able to learn and i
 
 I will try to keep up with JS, TS and Python at the same time.
 
-# NOTE: 
+# NOTE:
+
 Some of the files include comments. Using comments might get your Code Review score down. Remember to remove them before entering the solution.
+
+| Riddle |        Solution        | <img src="https://skillicons.dev/icons?i=js" width="30"/> | <img src="https://skillicons.dev/icons?i=ts" width="30"/> | <img src="https://skillicons.dev/icons?i=py" width="30"/> |
+| :----: | :--------------------: | :-------------------------------------------------------: | :-------------------------------------------------------: | :-------------------------------------------------------: |
+| 🎁 Filter the defective gifts | <div align="center">[View](day1)</div> | Code Review: **10/10**<br>Stars: **8/8** | Code Review: **10/10**<br>Stars: **8/8** | Code Review: **10/10**<br>Stars: **8/8** |
+| 🏭 Manufacture the Toys | <div align="center">[View](day2)</div> | Code Review: **10/10**<br>Stars: **8/8** | Code Review: **10/10**<br>Stars: **8/8** | Code Review: **10/10**<br>Stars: **8/8** |
