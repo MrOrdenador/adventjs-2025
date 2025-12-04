@@ -17,7 +17,6 @@ I will try to keep up with JS, TS and Python at the same time.
 # NOTE:
 
 Some of the files include comments. Using comments might get your Code Review score down. Remember to remove them before entering the solution.
-I will be uploading the solutions with **one day of delay**, so people don't just copy and paste the problems.
 
 |             Riddle            |                Solution                | <img src="https://skillicons.dev/icons?i=js" width="30"/> | <img src="https://skillicons.dev/icons?i=ts" width="30"/> | <img src="https://skillicons.dev/icons?i=py" width="30"/> |
 | :---------------------------: | :------------------------------------: | :-------------------------------------------------------: | :-------------------------------------------------------: | :-------------------------------------------------------: |
