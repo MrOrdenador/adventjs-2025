@@ -1,9 +1,9 @@
-<a href="https://adventjs.com/" align="center">
+<p href="https://adventjs.com/" align="center">
   <img
     src="./resources/adventjs.webp"
     width="400"
   />
-</a>
+</p>
 
 # What is this repo?
 
