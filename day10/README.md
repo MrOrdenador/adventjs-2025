@@ -1,4 +1,4 @@
-# Day 11: 📨 Depth of Christmas magic
+# Day 10: 📨 Depth of Christmas magic
 
 🎄 **Depth of Christmas Magic**
 At the North Pole, Santa Claus is reviewing the magical letters 📩✨ he receives from children all over the world. These letters use an ancient Christmas language in which the brackets `[` and `]` represent the intensity of the wish.
