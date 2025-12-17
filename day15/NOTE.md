@@ -1,0 +1,1 @@
+I couldn't get a .py sol with 8/8 stars. I will keep trying in the next days
