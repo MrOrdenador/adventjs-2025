@@ -4,8 +4,8 @@ def draw_gift(size, symbol):
   box = symbol * size + "\n"
 
   for _ in range(size-2):
-    box = box + symbol + " "*(size-2) + symbol + "\n"
+    box += symbol + " "*(size-2) + symbol + "\n"
 
-  box = box + symbol * size
+  box += symbol * size
 
   return box
