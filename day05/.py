@@ -21,4 +21,3 @@ def time_until_take_off(from_time: str, take_off_time: str) -> int:
     )
   
   return int((converter(take_off_time) - converter(from_time)).total_seconds())
-print(time_until_take_off('2025*12*24@23|59|30 NP', "2025*12*25@00|00|00 NP"))
