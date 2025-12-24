@@ -1,23 +1,27 @@
 def decode_santa_pin(code: str) -> str | None:
-  code = code[1:-1]
-  code = code.split("][")
-
-  if len(code) != 4: return None
-
-  string = ""
-  for hole in code:
+  blocks = code[1:-1].split("][")
+    
+  if len(blocks) != 4:
+    return None
+    
+  result = ""
+    
+  for hole in blocks:
     if hole == "<":
-      if string == "": return None 
-      string = string + string[-1]
+      if len(result) == 0:
+        return None
+      result += result[-1]
       continue
-      
+        
     total = int(hole[0])
 
-    for char in hole[1:]:
-      if char == "+": 
+    for i in range(len(hole)):
+    char = hole[i]
+      if char == "+":
         total = (total + 1) % 10
       elif char == "-":
-        total = (total + 9) % 10
-    string = string + str(total)   
-   
-  return string
+        total = (total + 9) % 10 
+        
+  result += str(total)
+    
+  return result
