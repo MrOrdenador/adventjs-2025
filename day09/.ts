@@ -4,6 +4,7 @@ type Result = 'fail' | 'crash' | 'success'
 
 function moveReno(board: Board, moves: Moves): Result {
   let boardArray = board.split("\n").filter((line) => line.trim() != "")
+
   const allowedMoves = {
     R: { row: 0, col: 1 },
     L: { row: 0, col: -1 },
@@ -11,28 +12,21 @@ function moveReno(board: Board, moves: Moves): Result {
     D: { row: 1, col: 0 }
   }
 
-  function outOfBounds(r: number, c: number): boolean {
+  function outOfBounds(row: number, col: number): boolean {
     return !(
-      r >= 0 &&
-      r < boardArray.length &&
-      c >= 0 &&
-      c < boardArray[0].length
+      row >= 0 &&
+      row < boardArray.length &&
+      col >= 0 &&
+      col < boardArray[0].length
     )
   }
 
-  function findReno(): { row: number; col: number } | null {
-    for (let row = 0; row < boardArray.length; row++) {
-      for (let col = 0; col < boardArray[row].length; col++) {
-        if (boardArray[row][col] === "@") {
-          return { row, col }
-        }
-      }
-    }
-    return null
-  }
+  const startRow = boardArray.findIndex(line => line.includes("@"));
 
-  const posReno = findReno()
-  if (!posReno) return "fail"
+  let posReno = {
+    row: startRow,
+    col: boardArray[startRow].indexOf("@")
+  };
 
   for (const char of moves) {
     const moveData = allowedMoves[char]
@@ -44,9 +38,9 @@ function moveReno(board: Board, moves: Moves): Result {
 
     const nextCell = boardArray[posReno.row][posReno.col]
 
-    if (nextCell === "*") return "success"
-    if (nextCell === "#") return "crash"
+    if (nextCell === '*') return "success"
+    if (nextCell === '#') return "crash"
   }
 
-  return 'fail'
+  return "fail"
 }
