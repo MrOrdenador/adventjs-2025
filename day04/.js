@@ -6,7 +6,7 @@
 function decodeSantaPin(code) {
   code = code.slice(1, -1).split("][");
   
-  if (code.length !== 4) return null;
+  if (code.length != 4) return null;
 
   let result = "";
 
@@ -18,11 +18,10 @@ function decodeSantaPin(code) {
 
     let total = Number(hole[0]);
     for (let i = 1; i < hole.length; i++) {
-      const char = hole[i];
-      if (char === "+") total = (total + 1) % 10;
-      else if (char === "-") total = (total - 1 + 10) % 10;
+      if (hole[i] === "+") total = (total + 1) % 10;
+      else if (hole[i] === "-") total = (total - 1 + 10) % 10;
     }
-
+    
     result += total;
   }
 
