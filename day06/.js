@@ -14,10 +14,10 @@ function matchGloves(gloves) {
       pending[color] = { L: 0, R: 0 };
     }
 
-    if (hand === 'L' && pending[color].R > 0) {
+    if (hand === "L" && pending[color].R > 0) {
       pending[color].R--;
       result.push(color);
-    } else if (hand === 'R' && pending[color].L > 0) {
+    } else if (hand === "R" && pending[color].L > 0) {
       pending[color].L--;
       result.push(color);
     } else {
