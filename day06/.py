@@ -1,19 +1,25 @@
 from typing import List, Dict
 
 def match_gloves(gloves: List[Dict[str, str]]) -> List[str]:
-  counts = {}
+  pending = {}
+  result = []
+
   for glove in gloves:
     color = glove["color"]
     hand = glove["hand"]
 
-    if color not in counts:
-      counts[color] = { "L": 0, "R": 0 }
-    counts[color][hand] += 1
+    if color not in pending:
+      pending[color] = {"L": 0, "R": 0}
 
-  array = []
+    if hand == "L" and pending[color]["R"] > 0:
+      pending[color]["R"] -= 1
+      result.append(color)
 
-  for color in counts:
-    pairs = min(counts[color]["L"], counts[color]["R"])
-    for i in range(pairs): array.append(color)
+    elif hand == "R" and pending[color]["L"] > 0:
+      pending[color]["L"] -= 1
+      result.append(color)
+      
+    else:
+      pending[color][hand] += 1
 
-  return array
+  return result
