@@ -5,9 +5,9 @@
  */
 function timeUntilTakeOff(fromTime, takeOffTime) {
   function converter(elftime){
-    elftime = elftime.slice(0, -3)
+    let time = elftime.slice(0, -3)
 
-    let [y, m, extra] = elftime.split("*")
+    let [y, m, extra] = time.split("*")
     let [d, extratime] = extra.split("@")
     let [hh, mm, ss] = extratime.split("|")
 
