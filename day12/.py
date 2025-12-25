@@ -1,25 +1,27 @@
 def elf_battle(elf1: str, elf2: str) -> int:
-  hp1 = 3
-  hp2 = 3
+  hp1, hp2 = 3, 3
 
-  for i in range(min(len(elf1), len(elf2))):
-    m1 = elf1[i]
-    m2 = elf2[i]
+  damage_table = {
+    'A': {'B': 0, 'A': -1, 'F': -1},
+    'F': {'B': -2, 'A': -2, 'F': -2}
+  }
 
-    dmg1 = 2 if m2 == "F" else 1 if m2 == "A" and m1 != "B" else 0
-    dmg2 = 2 if m1 == "F" else 1 if m1 == "A" and m2 != "B" else 0
+  def calc_damage(attack, defense):
+    # In case the move is invalid
+    if attack not in damage_table or defense not in damage_table[attack]:
+      return 0
+    return damage_table[attack][defense]
 
-    hp1 -= dmg1
-    hp2 -= dmg2
+  for move1, move2 in zip(elf1, elf2):
+    damage_to_hp2 = calc_damage(move1, move2)
+    damage_to_hp1 = calc_damage(move2, move1)
+    
+    hp2 += damage_to_hp2
+    hp1 += damage_to_hp1
 
     if hp1 <= 0 or hp2 <= 0:
-        if hp1 <= 0 and hp2 <= 0:
-            return 0
-        return 2 if hp1 <= 0 else 1
+      break
 
-  if hp1 > hp2:
-      return 1
-  elif hp2 > hp1:
-      return 2
-  else:
-      return 0
+  if hp1 == hp2:
+    return 0
+  return 1 if hp1 > hp2 else 2
