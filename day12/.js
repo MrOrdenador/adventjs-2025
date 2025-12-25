@@ -4,22 +4,29 @@
  * @return {number} - The result of the battle
  */
 function elfBattle(elf1, elf2) {
-  let hp1 = 3
-  let hp2 = 3
+  let elfsHP = [3, 3];
+  const rounds = Math.min(elf1.length, elf2.length);
 
-  for (let i = 0; i < Math.min(elf1.length, elf2.length); i++){
-    const m1 = elf1[i]
-    const m2 = elf2[i]
+  const damageTable = {
+    A: { B: 0, A: -1, F: -1 },
+    F: { B: -2, A: -2, F: -2 },
+  };
 
-    const dmg1 = (m2 === "A" && m1 !== "B" ? 1 : 0) + (m2 === "F" ? 2 : 0)
-    const dmg2 = (m1 === "A" && m2 !== "B" ? 1 : 0) + (m1 === "F" ? 2 : 0)
+  function calcDamage(attackMove, defenseMove){
+    return damageTable[attackMove]?.[defenseMove] ?? 0;
+  }
 
-    hp1 -= dmg1
-    hp2 -= dmg2
+  for (let i = 0; i < rounds; i++) {
+    elfsHP[1] += calcDamage(elf1[i], elf2[i]);
+    elfsHP[0] += calcDamage(elf2[i], elf1[i]);
 
-    if (hp1 <= 0 || hp2 <= 0){
-      return hp1 <= 0 && hp2 <= 0 ? 0 : hp1 <= 0 ? 2 : 1
+    if (elfsHP[0] <= 0 || elfsHP[1] <= 0) {
+      if (elfsHP[0] <= 0 && elfsHP[1] <= 0) return 0;
+      return elfsHP[0] <= 0 ? 2 : 1;
     }
   }
-  return hp1 > hp2 ? 1 : hp2 > hp1 ? 2 : 0
+
+  if (elfsHP[0] > elfsHP[1]) return 1;
+  if (elfsHP[1] > elfsHP[0]) return 2;
+  return 0;
 }
